@@ -22,5 +22,5 @@ COPY third_party/trf409.linux64 /opt/trf/trf
 RUN chmod 755 /opt/trf/trf
 ENV PATH=/opt/RepeatMasker-${REPEAT_MASKER_VERSION}:/opt/trf:/opt/rmblast-${RMBlast_VERSION}/bin:${PATH}
 WORKDIR /opt/RepeatMasker-${REPEAT_MASKER_VERSION}
-RUN perl configure -trf_prgm /opt/trf/trf -rmblast_dir /opt/rmblast-${RMBlast_VERSION}/bin -default_search_engine RMBlast
+RUN perl configure -trf_prgm /opt/trf/trf -rmblast_dir /opt/rmblast-${RMBlast_VERSION}/bin -default_search_engine rmblast
 WORKDIR /
